@@ -39,9 +39,15 @@ public class PointManager : SingletonMonoBehaviour<PointManager>
                 _isFinish = true;
 
                 if (i == 0)
+                {
                     _win.SetActive(true);
+                    AudioManager.Instance.PlayBGM("Win");
+                }
                 else
+                {
                     _lose.SetActive(true);
+                    AudioManager.Instance.PlayBGM("Lose");
+                }
             }
         }
 

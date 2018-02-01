@@ -25,7 +25,7 @@ public class ChangeScene : MonoBehaviour {
             }
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !_animator.GetBool("touch"))
         {
             AudioManager.Instance.PlaySE("Enter");
             _animator.SetBool("touch", true);

@@ -38,9 +38,11 @@ public class Drop : MonoBehaviour {
             else
             {
                 //倒したドロップに点数加算
-                if(_lastCollisionId >= 0)
+                if (_lastCollisionId >= 0)
+                {
+                    AudioManager.Instance.PlaySE("チーン");
                     PointManager.Instance.AddPoint(_lastCollisionId);
-
+                }
                 //初期化
                 this.Start();
             }
